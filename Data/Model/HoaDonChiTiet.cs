@@ -14,7 +14,7 @@
         public string? DanhMucDuAnName { get; set; }
         public HoaDonChiTiet()
         {
-            SoLuong = GlobalHelper.InitializationNumber;
+            SoLuong = 1;
             NgayGhiNhan = GlobalHelper.InitializationDateTime;
         }
     }

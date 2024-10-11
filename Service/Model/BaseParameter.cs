@@ -33,7 +33,7 @@
         public long? DanhMucQuanHuyenID { get; set; }
         public long? DanhMucXaPhuongID { get; set; }
         public long? ToChucVungNuoiID { get; set; }
-        public long? DanhMucGiongID { get; set; }
+        public long? DanhMucDuAnID { get; set; }
         public BaseParameter()
 		{
 		}
