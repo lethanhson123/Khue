@@ -1,15 +1,15 @@
-﻿using System;
-
-namespace Service.Implement
+﻿namespace Service.Implement
 {
     public class BaseService<T, TRepository> : IBaseService<T>
         where T : BaseModel
         where TRepository : IBaseRepository<T>
     {
         private readonly TRepository _repository;
-        public BaseService(TRepository repository)
+        private readonly IWebHostEnvironment _WebHostEnvironment;
+        public BaseService(TRepository repository, IWebHostEnvironment WebHostEnvironment)
         {
             _repository = repository;
+            _WebHostEnvironment = WebHostEnvironment;
         }
         public virtual void Initialization(T model)
         {

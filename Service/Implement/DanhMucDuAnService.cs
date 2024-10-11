@@ -4,9 +4,11 @@
     , IDanhMucDuAnService
     {
         private readonly IDanhMucDuAnRepository _DanhMucDuAnRepository;
-        public DanhMucDuAnService(IDanhMucDuAnRepository DanhMucDuAnRepository) : base(DanhMucDuAnRepository)
+        private readonly IWebHostEnvironment _WebHostEnvironment;
+        public DanhMucDuAnService(IDanhMucDuAnRepository DanhMucDuAnRepository, IWebHostEnvironment WebHostEnvironment) : base(DanhMucDuAnRepository, WebHostEnvironment)
         {
             _DanhMucDuAnRepository = DanhMucDuAnRepository;
+            _WebHostEnvironment = WebHostEnvironment;
         }
     }
 }

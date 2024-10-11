@@ -36,7 +36,10 @@ namespace Service
         public static IServiceCollection AddService(this IServiceCollection services)
         {
             services.AddTransient<IDanhMucDuAnService, DanhMucDuAnService>();
-            
+            services.AddTransient<IDanhMucSanPhamService, DanhMucSanPhamService>();
+            services.AddTransient<IHoaDonChiTietService, HoaDonChiTietService>();
+            services.AddTransient<IThanhVienService, ThanhVienService>();
+
             services.AddSingleton(HtmlEncoder.Create(allowedRanges: new[] { UnicodeRanges.All }));
 
             return services;
@@ -45,7 +48,10 @@ namespace Service
         public static IServiceCollection AddRepository(this IServiceCollection services)
         {
             services.AddTransient<IDanhMucDuAnRepository, DanhMucDuAnRepository>();
-            
+            services.AddTransient<IDanhMucSanPhamRepository, DanhMucSanPhamRepository>();
+            services.AddTransient<IHoaDonChiTietRepository, HoaDonChiTietRepository>();
+            services.AddTransient<IThanhVienRepository, ThanhVienRepository>();
+
             return services;
         }
     }
